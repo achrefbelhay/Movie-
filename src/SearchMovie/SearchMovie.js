@@ -1,13 +1,13 @@
 import React from "react";
 import "./SearchMovie.css";
 
-function SearchMovie({ setMovieSearch }) {
+function SearchMovie({ setInput }) {
   return (
     <div className="search-container">
       <input
         type="text"
         placeholder="SearchMovie"
-        onChange={(e) => setMovieSearch(e.target.value)}
+        onChange={(e) => setInput(e.target.value)}
       />
     </div>
   );

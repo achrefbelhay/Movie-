@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 
-function Movieliste({ movie, movieSearch }) {
+function Movieliste({ movie, movieSearch, input }) {
   return (
     <div
       style={{
@@ -13,10 +13,10 @@ function Movieliste({ movie, movieSearch }) {
     >
       {movie
         .filter((el) =>
-          el.name.toLowerCase().includes(movieSearch.toLowerCase().trim())
+          el.name.toUpperCase().includes(input.toUpperCase().trim())
         )
         .map((el, key) => (
-          <Card key={el.key} el={el} />
+          <Card key={el.key} movie={el} />
         ))}
     </div>
   );

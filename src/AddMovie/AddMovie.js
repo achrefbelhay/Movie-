@@ -70,6 +70,7 @@ const AddMovie = ({ addMovie }) => {
             />
             <label>Movie Image</label>
             <input
+              className="image1"
               type="url"
               name="image"
               value={image}
